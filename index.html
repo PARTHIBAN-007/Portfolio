@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+  <!-- Custom CSS for specific sections -->
+  <style>
+    /* Custom styles here */
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <nav class="bg-gray-800 text-white py-4 fixed top-0 w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+      <!-- Logo and Branding -->
+      <div>
+        <h1 class="text-xl md:text-2xl font-bold">Parthiban K</h1>
+        <p class="hidden md:block text-sm">Data Scientist</p>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-toggle" class="text-white focus:outline-none">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navbar Links (Desktop) -->
+      <ul id="navbar-links" class="hidden md:flex space-x-4">
+        <li><a href="#main" class="hover:text-blue-400">Main</a></li>
+        <li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
+        <li><a href="#achievements" class="hover:text-blue-400">Achievements</a></li>
+        <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+        <li><a href="#education" class="hover:text-blue-400">Education</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden bg-gray-800 hidden">
+      <ul class="flex flex-col items-center py-2 space-y-2">
+        <li><a href="#main" class="block py-2 px-4 text-center hover:text-blue-400">Main</a></li>
+        <li><a href="#skills" class="block py-2 px-4 text-center hover:text-blue-400">Skills</a></li>
+        <li><a href="#achievements" class="block py-2 px-4 text-center hover:text-blue-400">Achievements</a></li>
+        <li><a href="#projects" class="block py-2 px-4 text-center hover:text-blue-400">Projects</a></li>
+        <li><a href="#education" class="block py-2 px-4 text-center hover:text-blue-400">Education</a></li>
+        <li><a href="#contact" class="block py-2 px-4 text-center hover:text-blue-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container mx-auto px-4 py-8">
+    
+  </div>
+
+  <!-- Tailwind CSS and JavaScript (for CDN usage) -->
+  <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.js"></script>
+
+  <!-- JavaScript to toggle mobile menu -->
+  <script>
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  
+  
+ 
+  
+  <!-- Main Section -->
+  <section id="main" class="flex h-[500px]">
+    <!-- Left Section: Profile Image, Resume, Hire Me -->
+    <div class="relative w-[500px] bg-gray-200 flex flex-col items-center justify-center">
+      <img
+        src="./me.jpg"
+        alt="Profile"
+        class="rounded-full h-[350px] md:h-[400px] w-auto md:w-[400px] mb-4"
+      />
+      <button id="resumeButton" class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md transition duration-300 hover:bg-blue-600 focus:outline-none mb-2">
+        <a href="./resume.pdf" target="_blank">Resume</a>
+      </button>
+      <a href="mailto:parthibankumar2005@gmail.com" class="text-blue-600 hover:underline">
+        <button id="hireMeButton" class="bg-green-500 text-white px-4 py-2 rounded-md shadow-md transition duration-300 hover:bg-green-600 focus:outline-none">
+          Hire Me
+        </button>
+      </a>
+    </div>
+    
+    <!-- Right Section: Name, Role -->
+    <div class="bg-white flex flex-col justify-center ml-4 p-6 text-center">
+      <h2 class="text-2xl font-bold">PARTHIBAN K</h2>
+      <p class="text-gray-600">Data Scientist</p>
+      <div class="mt-4">
+        <p class="text-sm text-gray-700">
+          As an aspiring data scientist, I enhance my skills through hands-on projects, stay updated with industry trends, and am committed to continuous learning and innovative problem-solving.
+        </p>
+      </div>
+      <!-- Resume document -->
+      <div id="resumeDocument" class="mt-4" style="display: none;">
+        <iframe
+          title="Resume"
+          src="./resume.pdf"
+          class="w-full h-[300px] md:h-[400px] frameBorder"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <div class="py-12" id="skills">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Skills</h2>
+      </div>
+      <div class="slick-carousel">
+        <div class="slider">
+          <div><img  class="h-48" src="./Python.jpg" alt="Python"></div>
+          <div><img  class="h-48" src="./Mysql.jpg" alt="MySQL"></div>
+          <div><img  class="h-48" src="./pandas.jpg" alt="pandas"></div>
+          <div><img  class="h-48" src="./numpy.jpg" alt="numpy"></div>
+          <div><img  class="h-48" src="./ScikitLearn.jpg" alt="ScikitLearn"></div>
+          <div><img  class="h-48" src="./tensorflow.jpg" alt="tensorflow"></div>
+          <div><img class="h-48" src="./matplotlib.jpg" alt="matplotlib"></div>
+          <div><img class="h-48" src="./seaborn.jpg" alt="seaborn"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slick Carousel JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <!-- Your Custom JS -->
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 6,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 3,
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+            }
+          }
+        ]
+      });
+    });
+  </script>
+
+  
+  
+
+  <!-- Achievement Section -->
+  <section id="achievements" class="py-6 sm:py-12">
+    <div class="text-center mb-6 sm:mb-12">
+      <h2 class="text-xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 sm:mb-4">Achievement</h2>
+    </div>
+    <div class="max-w-full sm:max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+      <!-- Achievement Cards -->
+      <div class="flex flex-col lg:flex-row bg-white rounded-lg shadow-md overflow-hidden mb-4 sm:mb-8">
+        <div class="lg:w-1/3 relative">
+          <a href="https://leetcode.com/Parthiban-007" target="_blank" rel="noopener noreferrer">
+            <img class="w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg" src="./leetcode.jpg" alt="Achievement 1">
+          </a>
+        </div>
+        <div class="lg:w-2/3 p-4 sm:p-6">
+          <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-4">leet Code :</h3>
+          <p class="text-gray-700 overflow-hidden h-20 sm:h-auto">
+            Solved 400+ problems in LeetCode
+          </p>
+          <p class="text-gray-700 overflow-hidden h-20 sm:h-auto">
+            300+ problems solved using Python for data structures and algorithms.
+          </p>
+          <p class="text-gray-700 overflow-hidden h-20 sm:h-auto">
+            90+ problems solved using MySQL and Pandas.
+          </p>
+          <p class="mt-2 sm:mt-4">
+            <a href="https://leetcode.com/Parthiban-007" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">View Achievement</a>
+          </p>
+        </div>
+      </div>
+      <!-- End Achievement Cards -->
+    </div>
+  </section>
+  <div class="text-center mb-6 sm:mb-12">
+    <h2 class="text-xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 sm:mb-4">Projects</h2>
+  </div>
+  <section id="projects">
+    <div id="projectSection" class="bg-gray-100 py-6 sm:py-12">
+      
+      <div class="max-w-full sm:max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+          <!-- Projects will be dynamically added here -->
+      </div>
+    </div>
+  </section>  
+
+  <div class="bg-gray-100 py-12" id="education">
+    <div class="text-center mb-6 sm:mb-12">
+      <h2 class="text-xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 sm:mb-4">Education</h2>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-4">College/University Education (2023-2027)</h3>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="p-6">
+            <div class="mb-4">
+              <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-4">Knowledge Institute Of Technology</h3>
+              <p class="text-gray-700 mb-2"><span class="font-bold">Degree :</span> B.Tech</p>
+              <p class="text-gray-700 mb-2"><span class="font-bold">Department :</span> Artificial Intelligence and Data Science</p>
+              <p class="text-gray-700 mb-2"><span class="font-bold">GPA :</span> 9.1</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-4">School Education (12th Grade)</h3>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="p-6">
+            <div class="mb-4">
+              <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-4">Government Higher Secondary School A.PUDUR</h3>
+              <p class="text-gray-700 mb-2"><span class="font-bold">Marks in 12th Grade :</span> 96.5% (579/600)</p>
+              <p class="text-gray-700 mb-2"><span class="font-bold">TNEA Cutoff :</span> 199.5/200</p>
+              <p class="text-gray-700 mb-2"><span class="font-bold">TNEA Rank :</span> 234</p>
+              <p class="text-gray-700 mb-2"><span class="font-bold">Marks Obtained in 11th Grade :</span> 93% (558/600)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section id="contact" class="py-6 sm:py-12 bg-gray-100">
+    <div class="text-center mb-6 sm:mb-12">
+      <h2 class="text-xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 sm:mb-4">Contact Information</h2>
+    </div>
+    <div class="max-w-full sm:max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Left Column -->
+        <div class="mb-8">
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700">Name:</label>
+            <p class="text-lg font-medium">Parthiban K</p>
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700">Contact Number:</label>
+            <p class="text-lg font-medium">
+              <a href="tel:+916382260182" class="text-blue-600">+916382260182</a>
+            </p>
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700">Email ID:</label>
+            <p class="text-lg font-medium">
+              <a href="mailto:parthibankumar2005@gmail.com" class="text-blue-600">Parthibankumar2005@gmail.com</a>
+            </p>
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700">Address:</label>
+            <p class="text-lg font-medium">Salem, Tamilnadu, India</p>
+          </div>
+        </div>
+        <!-- Right Column -->
+        <div class="mb-8">
+          <h3 class="text-xl mb-4 font-bold text-gray-800">Connect with Me</h3>
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700">LinkedIn:</label>
+            <a href="https://www.linkedin.com/in/parthiban-k2005" class="text-blue-600">LinkedIn Profile</a>
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700">GitHub:</label>
+            <a href="https://github.com/PARTHIBAN-007" class="text-blue-600">GitHub Profile</a>
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700">LeetCode:</label>
+            <a href="https://leetcode.com/Parthiban-007" class="text-blue-600">LeetCode Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  
+  <!-- Slick Carousel Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+   
+
+    
+
+      
+      
+    function useState(initialValue) {
+            var _value = initialValue;
+
+            function setValue(newValue) {
+                _value = newValue;
+                render(); // Trigger re-render
+            }
+
+            function getValue() {
+                return _value;
+            }
+
+            return [getValue, setValue];
+        }
+
+        // Sample projects data
+        var projects = [
+            {
+                title: 'Plant Disease Classification Using AI',
+                description:
+                    'Farmers every year face significant economic losses and crop waste due to various diseases in potato plants. To address this, we have developed an innovative solution using image classification with Convolutional Neural Networks (CNN). Our Website allows farmers to take a picture of their potato plants, and the app will instantly identify if the plant has a disease or not.',
+                githubLink: 'https://github.com/PARTHIBAN-007/Plant_Disease_Classifier',
+            },
+            {
+                title: 'Medical Diagnosis AI',
+                description:
+                    'Medical Diagnosis App, designed to empower users with comprehensive health management solutions. Our platform provides accurate disease identification and personalized health recommendations, Diet based on user-input symptoms.',
+                githubLink: 'https://github.com/PARTHIBAN-007/MEDICAL_DIAGNOSIS_AI',
+            }
+        ];
+
+        // Function to toggle description visibility
+        function toggleDescription(index) {
+            var [showFullDescription, setShowFullDescription] = useState(false);
+            setShowFullDescription(!showFullDescription);
+            projects[index].showFullDescription = showFullDescription;
+        }
+
+        // Initial render function
+        function render() {
+            var projectSection = document.getElementById('projectSection');
+            projectSection.innerHTML = ''; // Clear existing content
+            
+            projects.forEach(function(project, index) {
+                var projectElement = document.createElement('div');
+                projectElement.className = 'flex flex-col lg:flex-row bg-white rounded-lg shadow-md mb-4 sm:mb-8';
+
+                // Left side: Image
+                var leftSide = document.createElement('div');
+                leftSide.className = 'lg:w-1/3 relative';
+                var imageLink = document.createElement('a');
+                imageLink.href = project.githubLink;
+                imageLink.target = '_blank';
+                imageLink.rel = 'noopener noreferrer';
+                var image = document.createElement('img');
+                image.className = 'w-full h-48 sm:h-auto object-cover rounded-lg shadow-lg';
+                image.src = './github.jpg';
+                image.alt = 'GitHub repository';
+                imageLink.appendChild(image);
+                leftSide.appendChild(imageLink);
+                projectElement.appendChild(leftSide);
+
+                // Right side: Project details
+                var rightSide = document.createElement('div');
+                rightSide.className = 'lg:w-2/3 p-4 sm:p-6';
+                var projectTitle = document.createElement('h3');
+                projectTitle.className = 'text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-4';
+                projectTitle.textContent = project.title;
+                rightSide.appendChild(projectTitle);
+                var projectDescription = document.createElement('p');
+                projectDescription.className = project.showFullDescription ? 'text-gray-700 overflow-auto' : 'text-gray-700 overflow-hidden h-20';
+                projectDescription.textContent = project.description;
+                rightSide.appendChild(projectDescription);
+                var githubLink = document.createElement('a');
+                githubLink.href = project.githubLink;
+                githubLink.target = '_blank';
+                githubLink.rel = 'noopener noreferrer';
+                githubLink.textContent = 'View on GitHub';
+                rightSide.appendChild(githubLink);
+                if (project.description.length > 200) {
+                    var toggleButton = document.createElement('button');
+                    toggleButton.className = 'text-blue-500 mt-2 focus:outline-none';
+                    toggleButton.textContent = project.showFullDescription ? 'Show less' : 'Show more';
+                    toggleButton.onclick = function() {
+                        toggleDescription(index);
+                        render(); // Trigger re-render
+                    };
+                    rightSide.appendChild(toggleButton);
+                }
+                projectElement.appendChild(rightSide);
+
+                projectSection.appendChild(projectElement);
+            });
+        }
+
+        // Initial render call
+        render();
+  </script>
+
+</body>
+</html>
